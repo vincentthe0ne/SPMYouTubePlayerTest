@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct SimpleYouTubeTestApp: App {
+    let youTubeState: YoutubeControlState = YoutubeControlState()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(videoID: "xcJtL7QggTI")
+                .environmentObject(youTubeState)
         }
     }
 }

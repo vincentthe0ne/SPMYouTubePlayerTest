@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "YouTubePlayer",
+        "repositoryURL": "https://github.com/worldiety/Swift-YouTube-Player.git",
+        "state": {
+          "branch": "master",
+          "revision": "7df2250237df69f442dff53cb4ddddc39c37db47",
+          "version": null
+        }
+      },
+      {
+        "package": "SwiftUIX",
+        "repositoryURL": "https://github.com/SwiftUIX/SwiftUIX",
+        "state": {
+          "branch": "master",
+          "revision": "fe75a1243754c84489c1cd31979e8ba1687d194b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

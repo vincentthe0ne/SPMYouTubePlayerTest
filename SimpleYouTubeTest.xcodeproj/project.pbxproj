@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		E686C9DE25F1FF9900801B87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E686C9DD25F1FF9900801B87 /* Preview Assets.xcassets */; };
 		E686C9E925F1FF9900801B87 /* SimpleYouTubeTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686C9E825F1FF9900801B87 /* SimpleYouTubeTestTests.swift */; };
 		E686C9F425F1FF9900801B87 /* SimpleYouTubeTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686C9F325F1FF9900801B87 /* SimpleYouTubeTestUITests.swift */; };
+		E686CA0625F2005700801B87 /* YouTubePlayer in Frameworks */ = {isa = PBXBuildFile; productRef = E686CA0525F2005700801B87 /* YouTubePlayer */; };
+		E686CA0B25F200E600801B87 /* YoutubeControlState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686CA0A25F200E600801B87 /* YoutubeControlState.swift */; };
+		E686CA1025F200EF00801B87 /* YoutubePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E686CA0F25F200EF00801B87 /* YoutubePlayer.swift */; };
+		E686CA1625F2012300801B87 /* SwiftUIX in Frameworks */ = {isa = PBXBuildFile; productRef = E686CA1525F2012300801B87 /* SwiftUIX */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,8 @@
 		E686C9EF25F1FF9900801B87 /* SimpleYouTubeTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleYouTubeTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E686C9F325F1FF9900801B87 /* SimpleYouTubeTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleYouTubeTestUITests.swift; sourceTree = "<group>"; };
 		E686C9F525F1FF9900801B87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E686CA0A25F200E600801B87 /* YoutubeControlState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeControlState.swift; sourceTree = "<group>"; };
+		E686CA0F25F200EF00801B87 /* YoutubePlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubePlayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E686CA0625F2005700801B87 /* YouTubePlayer in Frameworks */,
+				E686CA1625F2012300801B87 /* SwiftUIX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +103,8 @@
 		E686C9D525F1FF9800801B87 /* SimpleYouTubeTest */ = {
 			isa = PBXGroup;
 			children = (
+				E686CA0F25F200EF00801B87 /* YoutubePlayer.swift */,
+				E686CA0A25F200E600801B87 /* YoutubeControlState.swift */,
 				E686C9D625F1FF9800801B87 /* SimpleYouTubeTestApp.swift */,
 				E686C9D825F1FF9800801B87 /* ContentView.swift */,
 				E686C9DA25F1FF9900801B87 /* Assets.xcassets */,
@@ -146,6 +156,10 @@
 			dependencies = (
 			);
 			name = SimpleYouTubeTest;
+			packageProductDependencies = (
+				E686CA0525F2005700801B87 /* YouTubePlayer */,
+				E686CA1525F2012300801B87 /* SwiftUIX */,
+			);
 			productName = SimpleYouTubeTest;
 			productReference = E686C9D325F1FF9800801B87 /* SimpleYouTubeTest.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +231,10 @@
 				Base,
 			);
 			mainGroup = E686C9CA25F1FF9800801B87;
+			packageReferences = (
+				E686CA0425F2005700801B87 /* XCRemoteSwiftPackageReference "Swift-YouTube-Player" */,
+				E686CA1425F2012300801B87 /* XCRemoteSwiftPackageReference "SwiftUIX" */,
+			);
 			productRefGroup = E686C9D425F1FF9800801B87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,7 +278,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E686C9D925F1FF9800801B87 /* ContentView.swift in Sources */,
+				E686CA0B25F200E600801B87 /* YoutubeControlState.swift in Sources */,
 				E686C9D725F1FF9800801B87 /* SimpleYouTubeTestApp.swift in Sources */,
+				E686CA1025F200EF00801B87 /* YoutubePlayer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +600,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E686CA0425F2005700801B87 /* XCRemoteSwiftPackageReference "Swift-YouTube-Player" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/worldiety/Swift-YouTube-Player.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		E686CA1425F2012300801B87 /* XCRemoteSwiftPackageReference "SwiftUIX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftUIX/SwiftUIX";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E686CA0525F2005700801B87 /* YouTubePlayer */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E686CA0425F2005700801B87 /* XCRemoteSwiftPackageReference "Swift-YouTube-Player" */;
+			productName = YouTubePlayer;
+		};
+		E686CA1525F2012300801B87 /* SwiftUIX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E686CA1425F2012300801B87 /* XCRemoteSwiftPackageReference "SwiftUIX" */;
+			productName = SwiftUIX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E686C9CB25F1FF9800801B87 /* Project object */;
 }

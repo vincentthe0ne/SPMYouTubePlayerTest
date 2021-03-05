@@ -8,14 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    var videoID: String
+    @EnvironmentObject var state: YoutubeControlState
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        YoutubePlayer(state)
+            .onAppear(perform: {
+                self.state.videoID = videoID
+            })
+            .frame(width: .infinity, height: 400)
+            .background(.gray)
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(videoID: "xcJtL7QggTI")
+            .environmentObject(YoutubeControlState())
     }
 }
